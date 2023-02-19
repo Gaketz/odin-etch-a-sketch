@@ -36,14 +36,15 @@ resBtn.addEventListener('click', resetGrid);
 //Get a grid number from the user
 function giveNum() {
     let newNum = prompt('Type your grid size');
-    if(newNum == typeof Number || newNum > 0  || newNum < 100) {
+    if(newNum == typeof Number || (newNum > 0  && newNum < 100)) {
         makeGrid(newNum);
         const wrapper = document.querySelector('.wrapper');
         wrapper.remove();
+    } else {
     }
 }
 
-//reseting a grid
+//Reseting a grid
 function resetGrid() {
     const wrapper = document.querySelector('.wrapper');
     wrapper.remove();
